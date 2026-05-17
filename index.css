@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  position: relative;
+}
+main{
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 20px;
+}
+.left{
+  height: 100vh;
+  width: 100%;
+}
+.language{
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background-color: #fff;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  white-space: nowrap;
+  border-radius: 50%;
+  box-shadow: 0px 1px 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-container{
+  width: 100%;
+  height: 100vh;
+}
+.left img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section{
+  overflow: scroll;
+  position: relative;
+}
+.content{
+  display: grid;
+  place-content: center;
+  margin-top: 70px;
+
+}
+.logo{
+  display: grid;
+  place-content: center;
+}
+.logo img{
+  width: 200px;
+}
+.form{
+  background-color: rgba(255, 0, 0, 0);
+  width: 500px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.form input{
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,0.4);
+  outline: none;
+  padding-left: 10px;
+}
+.password{
+  align-self: end;
+}
+.login{
+  height: 50px;
+  background-color: rgb(4, 4, 91);
+    color: white;border-radius: 5px;
+  border: 1px solid rgba(0,0,0,0.4);
+  outline: none;
+}
+.program{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px;
+}
+.box{
+  box-shadow: 0.1px 0.8px 1px 0.1px;
+    width: 240px;
+    padding: 15px;
+    border-radius: 5px;
+    height: 160px;
+    position: relative;
+    background-color: #fff;
+}
+.box:hover{
+      background-color: rgba(218, 165, 32, 0.74);
+}
+.enter{
+  height: 30px;
+  width: 85%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(4, 4, 91);
+    color: white;
+    /* font-weight: 600; */
+    position: absolute;
+    bottom: 10px;
+
+}
+@media (max-width: 768px) {
+  .left{
+    display: none;
+  }
+  main{
+    /* background-color: green; */
+    display: flex;
+  }
+  section{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .program{
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    /* background-color: green; */
+    padding-left: 30px;
+    width: 100%;
+    /* place-content: center; */
+    gap: 60px;
+  }
+  .box{
+    width: 350px;
+  }
+}
+
+@media (max-width:320px) {
+  .program{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    padding: 0 15px;
+  }
+  .box{
+    width: 100%;
+    max-width: 100%;
+  }
+  .form{
+    margin-top: 20px;
+  background-color: rgba(255, 0, 0, 0);
+  width: 300px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.logo img{
+  width: 150px;
+}
+}
+
+
+
+/* main {
+  display: flex;
+  width: 100vw;
+  height: auto;
+  font-family: "poppins", "Montserrat", sans-serif;
+}
+.left {
+  width: 33%;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.img-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.left img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+section {
+  position: absolute;
+  width: 64%;
+  left: 450px;
+}
+.language p {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 2px;
+  position: absolute;
+  right: 18px;
+  top: -10px;
+  cursor: pointer;
+}
+.language:hover {
+  background-color: rgba(128, 128, 128, 0.212);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  width: 100%;
+  padding-right: 30px;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 140px;
+  margin-bottom: 30px;
+}
+.logo-text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 60px;
+  color: rgb(3, 3, 70);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+input {
+  height: 60px;
+  width: 450px;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding-left: 27px;
+}
+input::placeholder {
+  font-size: 15px;
+}
+.password {
+  text-align: end;
+  padding-top: 3px;
+}
+.password a {
+  text-decoration: underline;
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+}
+.login {
+  height: 50px;
+  font-size: 17px;
+  background-color: rgb(7, 7, 110);
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 70px;
+}
+.program {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  row-gap: 40px;
+  width: 100%;
+}
+.box{
+    box-shadow: 0.1px 0.8px 1px 0.1px;
+    width: 240px;
+    padding: 15px;
+    border-radius: 5px;
+    height: 160px;
+    position: relative;
+}
+.box h3{
+    font-size: 17px;
+    color: rgb(69, 59, 59);
+}
+.box p{
+    color: grey;
+    font-size: 13px;
+    padding: 5px 0px 10px 0px;
+}
+.enter{
+    width: 85%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(4, 4, 91);
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    bottom: 10px;
+}
+.enter:hover{
+    opacity: 0.9;   
+}
+.box:hover{
+    background-color: rgba(218, 165, 32, 0.74);
+}
+.footer{
+    display: flex;
+    width: 100%;
+    padding-top: 50px;
+    justify-content: center;
+    font-size: 15px;
+       font-family: "Dancing Script";
+}
+.footer p{
+    font-family: "Pacifico", cursive;
+     margin-top: 30px;
+    padding-bottom: 5px; 
+}
+.name{
+    font-size: 15px;
+    color: red;  
+} */
+/* @media (max-width: 768px) {
+  main{
+    background-color: green;
+
+  }
+  .left{
+    display: none;
+  }
+  section{
+    left: 200px;
+    position: relative;
+    width: 100%;
+  }
+  input{
+    height: 20px;
+    width: 200px;
+  }
+  .program{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 0px;
+  }
+  .content{
+    margin-top: 0px;
+    padding-right: 0px;
+    width: 0px;
+    background-color: red;
+  }
+  .language{
+    visibility: hidden;
+  }
+}    
